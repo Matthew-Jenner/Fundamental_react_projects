@@ -1,9 +1,17 @@
 import { useState } from "react";
 import data from "./data"
+import List from './List'
 
 
 function App() {
   const [people, setPeople] = useState(data)
-  return <h2>Birthday Reminder - Starter</h2>;
+  
+  return (<main>
+    <section className="container">
+      <h3>{people.length}Birthdays Today</h3>
+      <List people={people}/>
+    </section>
+  </main>
+  )
 };
 export default App;
