@@ -222,21 +222,7 @@ ul {
   text-transform: capitalize;
 }
 /* alert */
-@keyframes spinner {
-  to {
-    transform: rotate(360deg);
-  }
-}
 
-.loading {
-  width: 6rem;
-  height: 6rem;
-  border: 5px solid var(--grey-400);
-  border-radius: 50%;
-  margin: 0 auto;
-  border-top-color: var(--primary-500);
-  animation: spinner 0.3s linear infinite;
-}
 /* title */
 
 .title {
@@ -252,7 +238,23 @@ ul {
 }
 /* ============= PROJECT CSS =============== */
 
-main {
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  width: 6rem;
+  height: 6rem;
+  border: 5px solid var(--grey-400);
+  border-radius: 50%;
+  margin: 0 auto;
+  border-top-color: var(--primary-500);
+  animation: spinner 0.6s linear infinite;
+}
+
+main{
   width: 90vw;
   max-width: var(--max-width);
   margin: 5rem auto;
@@ -264,7 +266,7 @@ main {
   gap: 2rem;
 }
 
-.single-tour {
+.single-tour{
   background: var(--white);
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-1);
@@ -272,7 +274,7 @@ main {
   position: relative;
 }
 
-.single-tour:hover {
+.single-tour:hover{
   box-shadow: var(--shadow-3);
 }
 
@@ -286,10 +288,11 @@ main {
   background: var(--primary-500);
   border-top-right-radius: var(--borderRadius);
 }
-.single-tour .img {
+.single-tour .img{
   height: 20rem;
   border-top-right-radius: var(--borderRadius);
   border-top-left-radius: var(--borderRadius);
+
 }
 
 .tour-info {
@@ -307,35 +310,37 @@ main {
   line-height: 1.5;
   color: var(--grey-500);
 }
-.info-btn,
-.delete-btn {
+.info-btn, .delete-btn {
   background: transparent;
   border: transparent;
   text-transform: capitalize;
   cursor: pointer;
+
 }
-.info-btn {
+
+.info-btn{
   color: var(--primary-500);
   font-weight: 600;
 }
-
-.delete-btn {
+.delete-btn{
   border: 1px solid var(--primary-500);
   color: var(--primary-500);
 }
+
 .delete-btn:hover {
   background: var(--primary-500);
   color: var(--white);
 }
-
 @media screen and (min-width: 768px) {
   .tours {
     grid-template-columns: 1fr 1fr;
     align-items: start;
   }
+  
 }
 @media screen and (min-width: 992px) {
   .tours {
     grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
   }
 }
