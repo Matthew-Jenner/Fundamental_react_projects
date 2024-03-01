@@ -36,7 +36,6 @@ const App = () => {
 						src={image}
 						alt={name}
 						className="person-img"
-            style={{width: '100px'}}
 					/>
 					<span className="quote-icon">
 						<FaQuoteRight />
