@@ -1,4 +1,4 @@
-import { SingleQuestion } from "./SingleQuestion"
+import { SingleQuestion } from "./SingleQuestion.jsx"
 
 const Questions = ({questions}) => {
   return ( <section className="container">
