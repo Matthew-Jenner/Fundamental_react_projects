@@ -287,3 +287,33 @@ main {
   border-radius: var(--borderRadius);
   box-shadow: var(--shadow-3);
 }
+.question p {
+  color: var(--grey-500);
+  line-height: 1.5rem;
+  margin-top: 1rem;
+}
+.question header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.question h5 {
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: var(--grey-700);
+}
+.question-btn {
+  background: transparent;
+  border-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  background: var(--primary-900);
+  color: var(--white);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
