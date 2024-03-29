@@ -243,6 +243,7 @@ ul {
 
 .title {
   text-align: center;
+ margin: auto;
 }
 
 .title-underline {
