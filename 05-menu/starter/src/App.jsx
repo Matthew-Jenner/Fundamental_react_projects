@@ -2,6 +2,7 @@ import { useState } from "react";
 import Title from "./Title";
 import menu from "./data";
 import Menu from "./Menu";
+import Categories from "./Categories";
 
 // const tempCategories = menu.map((item) => item.category);
 // const tempSet = new Set(tempCategories);
@@ -18,8 +19,9 @@ const App = () => {
 		<main>
 			<section className="menu">
 				<Title text="our menu" />
+        <Categories categories={categories}/>		
 				<Menu items={menuItems} />
-			</section>
+      	</section>
 		</main>
 	);
 };
