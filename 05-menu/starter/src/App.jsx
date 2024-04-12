@@ -9,19 +9,29 @@ import Categories from "./Categories";
 // const tempItems = ['all',...tempSet]
 // console.log(tempItems); same as below code
 
-const allCategories = ['all',...new Set(menu.map((item) => item.category))]
+const allCategories = ["all", ...new Set(menu.map((item) => item.category))];
 
 const App = () => {
 	const [menuItems, setMenuItems] = useState(menu);
-  const [categories, newCategories] = useState(allCategories)
-  console.log(categories);
+	const [categories, newCategories] = useState(allCategories);
+	const filterItems = (category) => {
+		if (category === "all") {
+			setMenuItems(menu);
+      return
+		}
+		const newItems = menu.filter((item) => item.category === category);
+		setMenuItems(newItems);
+	};
 	return (
 		<main>
 			<section className="menu">
 				<Title text="our menu" />
-        <Categories categories={categories}/>		
+				<Categories
+					categories={categories}
+					filterItems={filterItems}
+				/>
 				<Menu items={menuItems} />
-      	</section>
+			</section>
 		</main>
 	);
 };
